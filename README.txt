@@ -1,39 +1,40 @@
 
 
 
-Kabaca yapılanları özetlemek gerekirse: 
+Kabaca yapÄ±lanlarÄ± Ã¶zetlemek gerekirse: 
 
-Yanlış anlaşılmış veya eksik yapılmış bir kısım varsa belirtirseniz sevinirim.Kurulum ve sonuçları için screeshotlara bakabilirsiniz.
+YanlÄ±ÅŸ anlaÅŸÄ±lmÄ±ÅŸ veya eksik yapÄ±lmÄ±ÅŸ bir kÄ±sÄ±m varsa belirtirseniz sevinirim.Kurulum ve sonuÃ§larÄ± iÃ§in screeshotlara bakabilirsiniz.
 
-## Fazla karmaşıklıga sebeb vermemek adına istenilen özellikleri image(python+mysql) ları ayrı ayrı yapıp linklemedim.
-istenilen req'leri Dockerfile içinde "requireiments.txt" den okuyup kuruyor.
+## Fazla karmaÅŸÄ±klÄ±ga sebeb vermemek adÄ±na istenilen Ã¶zellikleri image(python+mysql) larÄ± ayrÄ± ayrÄ± yapÄ±p linklemedim.
+istenilen req'leri Dockerfile iÃ§inde "requireiments.txt" den okuyup kuruyor.
 
-python2.7.15 ve Alpine3.7  için ikisininde içinde hazır oldugu tek bir image dan kullandım. 
+python2.7.15 ve Alpine3.7  iÃ§in ikisininde iÃ§inde hazÄ±r oldugu tek bir image dan kullandÄ±m. 
 
-## Challege de yapılacak değişiklikler Vagrant tan bagımsız dedigi için VagrantFile içinde docker için ek özellikler tanımlamadım.(Network,CPU,Mem vs vs) 
+## Challege de yapÄ±lacak deÄŸiÅŸiklikler Vagrant tan bagÄ±msÄ±z dedigi iÃ§in VagrantFile iÃ§inde docker iÃ§in ek Ã¶zellikler tanÄ±mlamadÄ±m.(Network,CPU,Mem vs vs) 
 sadece shared folder ekledim.
 
-## VagrantFile'da Dockerfile içindeki (/root/myapp) tanımlanan özellikler dogrultusunda image build edip onu çalıştırıyor.
+## VagrantFile'da Dockerfile iÃ§indeki (/root/myapp) tanÄ±mlanan Ã¶zellikler dogrultusunda image build edip onu Ã§alÄ±ÅŸtÄ±rÄ±yor.
 
-# Kubernetes kısmını açıkcası tam anlıyamadım.Size yazdıgım mail'dende cevap alamadıgım için docker ve kubernetes in hali hazırda kurulu oldugunu varsaydım ve 
-Kubernetes'in oluşturulan containerları daha sonra manage edileceğini ve Kubeadm ile cluster yapılandırmasından sonra kubectl ile pod ve container start olacagını  varsaydım.
+# Kubernetes kÄ±smÄ±nÄ± aÃ§Ä±kcasÄ± tam anlÄ±yamadÄ±m.Size yazdÄ±gÄ±m mail'dende cevap alamadÄ±gÄ±m iÃ§in docker ve kubernetes in hali hazÄ±rda kurulu oldugunu varsaydÄ±m ve 
+Kubernetes'in oluÅŸturulan containerlarÄ± daha sonra manage edileceÄŸini ve Kubeadm ile cluster yapÄ±landÄ±rmasÄ±ndan sonra kubectl ile pod ve container start olacagÄ±nÄ±  varsaydÄ±m.
  		"kubectl run pythonAPP --image=muslum/beylik --replicas=2 --port=8080"
 
 
-sanırsam vagrant file içinde tanımlanacak(provision Shell ile ve repo'dan) bir docker ve kubernetes installl istemediginizi varsaydım.
+sanÄ±rsam vagrant file iÃ§inde tanÄ±mlanacak(provision Shell ile ve repo'dan) bir docker ve kubernetes installl istemediginizi varsaydÄ±m.
 
-# yine kubernetes tam olarak hangi tarz bir yapılandırma istediginzi anlıyamadıgım için Vagrantfile de kubernetes NODE larıda tanımlamadım.
+# yine kubernetes tam olarak hangi tarz bir yapÄ±landÄ±rma istediginzi anlÄ±yamadÄ±gÄ±m iÃ§in Vagrantfile de kubernetes NODE larÄ±da tanÄ±mlamadÄ±m.
 nodes = [
   { :hostname => 'kubernetes-master',  :ip => 'x.x.x.x'}
   { :hostname => 'kubernetes-node',  :ip => 'x.x.x.x' }
 
-veya Ansible playbooklar yazılıp bu şekildede bir çalışma yapmadım Kubernetes kısmını tam anlıyamadıgım için.
+veya Ansible playbooklar yazÄ±lÄ±p bu ÅŸekildede bir Ã§alÄ±ÅŸma yapmadÄ±m Kubernetes kÄ±smÄ±nÄ± tam anlÄ±yamadÄ±gÄ±m iÃ§in.
 
-##  YAML için de herhangi bir tanımlama yapmadım nasıl bir kubernetes istedigini anlamadıgım için.
+##  YAML iÃ§in de herhangi bir tanÄ±mlama yapmadÄ±m nasÄ±l bir kubernetes istedigini anlamadÄ±gÄ±m iÃ§in.
 
 
-Yanlış anlaşılmalarım var ise  belirtmenizi rica ederim.Tekrardan bir değişiklik yapabilirim bunlar doğrultusunda.
+YanlÄ±ÅŸ anlaÅŸÄ±lmalarÄ±m var ise  belirtmenizi rica ederim.Tekrardan bir deÄŸiÅŸiklik yapabilirim bunlar doÄŸrultusunda.
 
+NOT: Yeterli kaynaÄŸÄ±m olmadÄ±gÄ± iÃ§in "Vagrant up " tam anlamÄ±yla gerÃ§ekleÅŸtirmedim.Kaynak yetersizliginden dolayÄ± ya zaman aÅŸÄ±mÄ±na ugradÄ± yada  Ã§alÄ±ÅŸtÄ±ktan kÄ±sa bir sÃ¼re sonra sistem kitlendi.Bu sebeble bu aÅŸamayÄ± saglÄ±klÄ± bir ÅŸekilde test edemedim.
 
 
 
