@@ -1,5 +1,3 @@
 Flask
-
 MySQL-python
-
 gunicorn==19.3.0
