@@ -27,9 +27,8 @@ nodes = [
   { :hostname => 'kubernetes-master',  :ip => 'x.x.x.x'}
   { :hostname => 'kubernetes-node',  :ip => 'x.x.x.x' }
 
-veya Ansible playbooklar yazılıp bu şekildede bir çalışma yapmadım Kubernetes kısmını tam anlıyamadıgım için.
+veya Ansible playbooklar yazıp veya YAML için de herhangi bir tanımlama yapıp bu şekildede bir çalışma yapmadım Kubernetes kısmını tam anlıyamadıgım için.
 
-##  YAML için de herhangi bir tanımlama yapmadım nasıl bir kubernetes istedigini anlamadıgım için.
 
 
 Yanlış anlaşılmalarım var ise  belirtmenizi rica ederim.Tekrardan bir değişiklik yapabilirim bunlar doğrultusunda.
